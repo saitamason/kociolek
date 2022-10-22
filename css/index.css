@@ -1,0 +1,364 @@
+.header__container {
+  padding: 3.2rem 4.8rem;
+}
+.header__logo-link:link,
+.header__logo-link:visited,
+.header__logo {
+  max-width: 24rem;
+  border: none;
+}
+.header__logo-link:hover,
+.header__logo-link:active {
+  border: none;
+}
+.header__logo-link:focus {
+  box-shadow: none;
+}
+.header__logo {
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  height: 100%;
+}
+.header__logo:hover {
+  transform: translateY(-5%);
+}
+.header__logo:active {
+  transform: translateY(5%);
+}
+
+.top-navigation__ul {
+  height: 100%;
+  gap: 4.8rem;
+}
+.top-navigation__link:link,
+.top-navigation__link:visited {
+  color: var(--color--grey-2);
+  font-weight: var(--font-weight--medium);
+  font-size: var(--font-size--small);
+  border: none;
+}
+.top-navigation__link:link,
+.top-navigation__link:visited,
+.footer-navigation__link:link,
+.footer-navigation__link:visited,
+.menu-button {
+  transition: var(--animation--regular-linear);
+  display: block;
+}
+.top-navigation__link:hover,
+.footer-navigation__link:hover,
+.footer-navigation__link:focus,
+.menu-button:hover {
+  transform: translateY(-5%);
+  border: none;
+}
+.top-navigation__link:active,
+.footer-navigation__link:active,
+.menu-button:active {
+  transform: translateY(5%);
+  border: none;
+}
+.top-navigation__link--to-top:link,
+.top-navigation__link--to-top:visited {
+  display: none;
+}
+
+.header--sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(7px);
+  box-shadow: var(--shadow--light);
+  animation: 0.4s animateHeader ease-in-out;
+}
+.header--sticky .header__container {
+  padding: 1.6rem 4.8rem;
+  align-items: center;
+}
+.header--sticky .header__logo {
+  max-width: 16rem;
+}
+.header--sticky .button:link::before,
+.header--sticky .button:visited::before {
+  background-color: var(--color--main-0);
+}
+
+.menu-button {
+  font-size: var(--font-size--very-large);
+  line-height: 0;
+  display: none;
+  z-index: 210;
+}
+.menu-button--close {
+  animation: 0.5s rotate ease-in-out;
+}
+.menu-button--open {
+  animation: 0.3s resize ease-in;
+}
+
+.hero__container {
+  padding-top: 3.2rem;
+  padding-bottom: 6.4rem;
+}
+.hero__description {
+  margin-top: 3.2rem;
+  margin-bottom: 4.8rem;
+}
+.hero__button--contact {
+  margin-right: 1.6rem;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+}
+
+.offer {
+  background: linear-gradient(
+      297deg,
+      rgba(0, 0, 0, 0) 30%,
+      var(--color--shade-3) 84%
+    ),
+    linear-gradient(322deg, var(--color--main-3) 0%, rgba(255, 255, 255, 0) 20%),
+    linear-gradient(
+      50deg,
+      rgba(255, 255, 255, 0) 70%,
+      var(--color--accent-secondary-0) 100%
+    ),
+    linear-gradient(
+      200deg,
+      rgba(255, 255, 255, 0) 50%,
+      var(--color--accent-primary-0) 80%
+    ),
+    center / cover url('../img/wedding.jpg');
+  color: var(--color--white);
+  text-shadow: var(--shadow--strong);
+}
+.offer__container {
+  padding-top: 16rem;
+  padding-bottom: 12.8rem;
+  grid-template-columns: 55fr 45fr;
+}
+.offer__subheading {
+  color: var(--color--main-0);
+}
+.offer__heading {
+  color: var(--color--main-2);
+}
+.offer__features {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.offer__features li {
+  --square-size: 15rem;
+  flex: 0 1 var(--square-size);
+  margin-bottom: 3.2rem;
+  transition: 0.5s all;
+}
+.offer__features li i {
+  width: var(--square-size);
+  height: var(--square-size);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8rem;
+  color: var(--color--shade-2);
+  text-shadow: none;
+  background-color: var(--color--white);
+  border: 1px solid var(--color--shade-1);
+  box-shadow: var(--shadow--regular), var(--effect--duo-tone-shadow),
+    var(--effect--out-of-lines-inset) var(--color--accent-primary-0);
+  border-radius: var(--border-radius--regular);
+  background: linear-gradient(
+      322deg,
+      var(--color--main-2-opaque) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(
+      50deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(169, 216, 213, 0.5) 100%
+    ),
+    linear-gradient(
+      200deg,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(246, 172, 193, 0.5) 80%
+    ),
+    #fff;
+}
+.offer__features li span {
+  display: block;
+  margin-top: 1.6rem;
+  line-height: var(--line-height--medium-large);
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--medium);
+  text-align: center;
+}
+
+.takeaway {
+  background-color: var(--color--white);
+}
+.takeaway__description {
+  margin-bottom: 3.2rem;
+}
+.takeaway__image {
+  width: 100%;
+  height: 100%;
+}
+
+.menu__tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  max-height: 22rem;
+  gap: 0.8rem;
+}
+.menu__tag-cloud span {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--border-radius--regular);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: var(--font-weight--medium);
+  line-height: 1.2;
+  color: var(--color--shade-3);
+  background-color: var(--color--main-1);
+  border: 1px solid var(--color--shade-1);
+  box-shadow: var(--effect--out-of-lines-inset) var(--color--white),
+    var(--effect--out-of-lines-outset) var(--color--main-1);
+}
+.menu__tag-cloud span:nth-child(6),
+.menu__tag-cloud span:nth-child(11),
+.menu__tag-cloud span:nth-child(13),
+.menu__tag-cloud span:nth-child(16),
+.menu__tag-cloud span:nth-child(17) {
+  background-color: var(--color--main-0);
+  box-shadow: var(--effect--out-of-lines-inset) var(--color--white),
+    var(--effect--out-of-lines-outset) var(--color--main-0);
+}
+.menu__tag-cloud span:nth-child(2),
+.menu__tag-cloud span:nth-child(3),
+.menu__tag-cloud span:nth-child(8),
+.menu__tag-cloud span:nth-child(10),
+.menu__tag-cloud span:nth-child(14),
+.menu__tag-cloud span:nth-child(19),
+.menu__tag-cloud span:nth-child(20) {
+  background-color: var(--color--main-2);
+  box-shadow: var(--effect--out-of-lines-inset) var(--color--white),
+    var(--effect--out-of-lines-outset) var(--color--main-2);
+}
+
+.about__map {
+  width: 100%;
+  border-radius: var(--border-radius--regular);
+}
+
+.owner {
+  border-radius: var(--border-radius--regular);
+  overflow: hidden;
+  box-shadow: var(--shadow--regular);
+}
+.owner__image {
+  max-width: 30rem;
+  height: 100%;
+}
+.owner__text-group {
+  display: flex;
+  justify-content: center;
+}
+.owner__text-group-container {
+  flex: 0 1 70.4rem;
+  padding: 3.2rem;
+}
+.owner__heading {
+  margin-bottom: 3.2rem;
+}
+.owner__quote {
+  font-style: italic;
+  position: relative;
+}
+
+.contact {
+  background-color: var(--color--white);
+}
+.contact__container {
+  column-gap: 9.6rem;
+  row-gap: 6.4rem;
+}
+.contact__image {
+  width: 100%;
+  height: 100%;
+}
+.contact__logo {
+  max-width: 20rem;
+  margin-bottom: 3.2rem;
+  height: 100%;
+}
+.contact__company-name {
+  font-weight: var(--font-weight--medium);
+}
+.contact__company-details,
+.contact__company-nip {
+  margin-bottom: 1.6rem;
+}
+.contact__company-details {
+  font-style: italic;
+}
+
+.footer {
+  padding-top: 15rem;
+  padding-bottom: 12.8rem;
+  font-size: var(--font-size--small);
+}
+.footer__heart {
+  transform: scale(1.5) translateY(10%);
+  margin: 0 0.6rem;
+  color: var(--color--accent-tertiary-0);
+  animation: 2s infinite alternate ease-in pulse;
+  cursor: pointer;
+}
+
+.footer-navigation__ul {
+  gap: 4.8rem;
+}
+.footer-navigation__ul li {
+  overflow: hidden;
+}
+.footer-navigation__link:hover,
+.footer-navigation__link:focus {
+  box-shadow: 4rem 1rem 0 var(--color--shade-1),
+    2rem 1rem 0 var(--color--accent-secondary-0),
+    0 1rem 0 var(--color--accent-tertiary-0);
+  border-radius: 0;
+}
+
+.credits {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.98);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.credits__container {
+  max-width: 50rem;
+  padding: 1.6rem;
+}
+.credits__heading,
+.credits__paragraph {
+  margin-bottom: 1.6rem;
+}
+.credits__paragraph {
+  font-size: var(--font-size--small);
+}

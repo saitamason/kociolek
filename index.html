@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu
+    Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe
+    miejsce spotkań, w którym możesz zorganizować dowolną imprezę
+    okolicznościową wraz z profesjonalną obsługą cateringową, zjeść
+    pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania
+    garmażeryjne na wynos."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/defaults.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/keyframes.css" />
+
+    <script type="module" src="js/script.js"></script>
+    <script defer src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="icon" type="image/png" href="icon/favicon-16.png" sizes="16" />
+    <link rel="icon" type="image/png" href="icon/favicon-32.png" sizes="32" />
+    <link rel="icon" type="image/png" href="icon/favicon-96.png" sizes="96" />
+    <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128" />
+    <link rel="icon" type="image/png" href="icon/favicon-196.png" sizes="196" />
+    <link rel="icon" type="image/png" href="icon/favicon-228.png" sizes="228" />
+    <link rel="icon" type="image/svg+xml" href="icon/favicon.svg" />
+    <link rel="apple-touch-icon" href="icon/apple-touch-icon.png" sizes="180" />
+    <link rel="manifest" href="icon/manifest.webmanifest" />
+
+    <title>Kociołek – Bufet i kawiarnia w Modraczku</title>
+  </head>
+  <body>
+    <header class="header background--main">
+      <div
+        class="header__container container container--max flex flex--space-between"
+      >
+        <a href="#" class="header__logo-link"
+          ><img
+            href="#"
+            src="img/logo.svg"
+            alt="Logo - Kociołek - Agnieszka Tomaszewska-Le"
+            class="header__logo"
+            width="240px"
+            height="66.6px"
+        /></a>
+        <nav class="top-navigation">
+          <ul class="top-navigation__ul flex flex--center">
+            <li>
+              <a
+                href="#"
+                class="top-navigation__link top-navigation__link--to-top"
+                >Do początku
+                <i class="ph-arrow-up-bold correct-phosphor-position"></i
+              ></a>
+            </li>
+            <li><a href="#oferta" class="top-navigation__link">Oferta</a></li>
+            <li>
+              <a href="#na-wynos" class="top-navigation__link">Na wynos</a>
+            </li>
+            <li><a href="#menu" class="top-navigation__link">Menu</a></li>
+            <li><a href="#o-nas" class="top-navigation__link">O nas</a></li>
+            <li>
+              <a
+                href="#kontakt"
+                class="top-navigation__link button button--white"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button aria-label="Otwórz menu" class="menu-button menu-button--open">
+          <i class="ph-list-bold"></i>
+        </button>
+        <button
+          aria-label="Zamknij menu"
+          class="menu-button menu-button--close"
+        >
+          <i class="ph-x-bold"></i>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section
+        id="hero"
+        class="hero background--main curve curve--bottom curve--bottom-shadow-line curve--bottom-shadow-line-gradient-1"
+      >
+        <div
+          class="hero__container container container--wide grid grid--2-columns grid--gap-medium"
+        >
+          <div class="hero__text-group">
+            <h1 class="hero__heading heading-primary animation--fade">
+              Pyszne i
+              <span
+                class="hero__highlight highlight highlight--accent-secondary"
+                >zdrowe</span
+              >
+              posiłki na Wyżynach w Bydgoszczy
+            </h1>
+            <p
+              class="hero__description animation--fade animation--fade-delay-1"
+            >
+              Kociołek to miejsce, w którym zorganizujesz imprezę
+              okolicznościową oraz najesz się do syta. A wszystko to dopasowane
+              do Twoich potrzeb i wymagań dietetycznych.
+            </p>
+            <a
+              href="#kontakt"
+              class="hero__button hero__button--contact button button--accent-primary animation--fade animation--fade-delay-1"
+              >Skontaktuj się z nami</a
+            >
+            <a
+              href="#oferta"
+              class="hero__button hero__button--more button button--white animation--fade animation--fade-delay-1"
+              >Dowiedz się więcej
+              <i
+                class="ph-arrow-down-bold correct-phosphor-position correct-phosphor-margin"
+              ></i
+            ></a>
+          </div>
+          <img
+            src="img/hero.svg"
+            alt="Grafika przedstawiająca kawiarnię."
+            class="hero__image animation--slide"
+            width="594px"
+            height="478.66px"
+          />
+        </div>
+      </section>
+      <section id="oferta" class="section offer">
+        <div
+          class="offer__container container container--default grid grid--gap-medium vertical-padding--large"
+        >
+          <hgroup class="offer__header">
+            <p class="offer__subheading subheading">Oferta</p>
+            <h2 class="offer__heading heading-secondary">
+              Profesjonalna obsługa imprez okolicznościowych
+            </h2>
+          </hgroup>
+          <div class="offer__text-group grid--to-first-column">
+            <p class="offer__description">
+              Wesele, rocznica ślubu, a może urodziny? Z nami zorganizujesz
+              każdą imprezę wraz z fachową obsługą cateringową i zadbasz, aby
+              wszystko przebiegło zgodnie z oczekiwaniami Twoich gości. Zadzwoń
+              do nas, a wspólnie ustalimy wszelkie szczegóły i znajdziemy
+              najlepsze rozwiązania.
+            </p>
+          </div>
+          <ul class="offer__features grid--span">
+            <li><i class="ph-martini"></i><span>Wesela</span></li>
+            <li><i class="ph-confetti"></i><span>Rocznice</span></li>
+            <li><i class="ph-cake"></i><span>Urodziny</span></li>
+            <li><i class="ph-baby"></i><span>Chrzciny</span></li>
+            <li><i class="ph-coffee"></i><span>Spotkania biznesowe</span></li>
+            <li><i class="ph-cloud-rain"></i><span>Stypy</span></li>
+          </ul>
+        </div>
+      </section>
+      <section
+        id="na-wynos"
+        class="section takeaway vertical-padding--large curve curve--top curve--top-shadow-line curve--bottom-shadow-line-gradient-2"
+      >
+        <div
+          class="takeaway__container container container--default grid grid--2-columns grid--gap-medium"
+        >
+          <hgroup class="takeaway__header grid--span">
+            <p class="takeaway__subheading subheading">Na wynos</p>
+            <h2 class="takeaway__heading heading-secondary">
+              Dania i garmażerka na wynos
+            </h2>
+          </hgroup>
+          <div class="takeaway__text-group">
+            <p class="takeaway__description">
+              Czeka Cię spotkanie z rodziną lub znajomymi w Twoim domu, ale nie
+              masz czasu, aby coś dla nich ugotować? Nie ma problemu! U nas
+              możesz zamówić pyszne dania obiadowe, kolacyjne lub przekąski, a
+              my zajmiemy się ich przygotowaniem. Sprawdź nasze menu i zamów już
+              dziś!
+            </p>
+            <a
+              href="tel:+48721473077"
+              class="takeaway__button button button--accent-secondary animate--from-left"
+              >Zadzwoń i zamów</a
+            >
+          </div>
+          <img
+            src="img/takeaway.svg"
+            alt="Zapakowane produkty na wynos, pączki, kawa, sałatki i lemoniada"
+            class="takeaway__image animate--from-right"
+            width="544px"
+            height="272.65px"
+          />
+        </div>
+      </section>
+      <section id="menu" class="section menu vertical-padding--large">
+        <div
+          class="menu__container container container--default grid grid--2-columns grid--gap-medium"
+        >
+          <hgroup class="menu__header grid--span">
+            <p class="menu__subheading subheading">Menu</p>
+            <h2 class="menu__heading heading-secondary">
+              Bogaty wybór potraw i przekąsek z różnych zakątków świata
+            </h2>
+          </hgroup>
+          <p class="menu__description">
+            Nasze menu jest bogate w przysmaki zarówno z kuchni europejskiej,
+            jak i wschodnioazjatyckiej. Na specjalne życzenie klienta
+            przygotowujemy również dania wegańskie, wegetariańskie czy
+            bezglutenowe, a także inne dania i potrawy. Nie boimy się
+            eksperymentować!
+          </p>
+          <figure class="menu__tag-cloud animate--from-right">
+            <span>Wegańskie</span>
+            <span>Bez glutenu</span>
+            <span>Wegetariańskie</span>
+            <span>Z mięsem</span>
+            <span>Niskobiałkowe</span>
+            <span>Przystawki</span>
+            <span>Wietnamskie</span>
+            <span>Obiady</span>
+            <span>Polskie</span>
+            <span>Bez laktozy</span>
+            <span>Włoskie</span>
+            <span>Na słodko</span>
+            <span>Francuskie</span>
+            <span>Przekąski</span>
+            <span>Ukraińskie</span>
+            <span>Na słono</span>
+            <span>Kolacje</span>
+            <span>Wykwintne</span>
+            <span>Smaczne</span>
+            <span>Zdrowe</span>
+          </figure>
+        </div>
+      </section>
+      <section id="o-nas" class="section about vertical-padding--large">
+        <div
+          class="about__container container container--default grid grid--2-columns grid--gap-medium"
+        >
+          <hgroup class="about__header grid--span">
+            <p class="about__subheading subheading">O nas</p>
+            <h2 class="about__heading heading-secondary">
+              Pyszne jedzenie w samym sercu Wyżyn
+            </h2>
+          </hgroup>
+          <p class="about__description">
+            Kociołek to bufet i kawiarnia umieszczona na pierwszym piętrze Domu
+            Kultury “Modraczek”, na Wyżynach w Bydgoszczy. Jest to wspaniałe
+            miejsce spotkań, w którym możesz zorganizować dowolną imprezę
+            okolicznościową wraz z profesjonalną obsługą cateringową, zjeść
+            pyszne posiłki obiadowe, a także zamówić wybrane potrawy i dania
+            garmażeryjne na wynos.
+          </p>
+          <p class="about__description">
+            Kociołek oferuje organizację i obsługę wesel, rocznic, urodzin,
+            chrzcin, uroczystości z okazji przyjęcia pierwszej komunii świętej,
+            spotkań biznesowych, a także styp w nowo wyremontowanych salach.
+            Zaplecze bufetu stanowi dobrze wyposażona kuchnia oraz doświadczona
+            kadra kucharzy i kelnerów. Skontaktuj się z nami, a wspólnie
+            ustalimy wszelkie szczegóły Twojej imprezy!
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.885507415805!2d18.031535315579262!3d53.11224809992137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470313031b9c823f%3A0x4841d8b74f0165b0!2sKocio%C5%82ek%20-%20Agnieszka%20Tomaszewska-Le!5e0!3m2!1sen!2spl!4v1665413028797!5m2!1sen!2spl"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="about__map grid--span"
+            title="Mapy Google z lokalizacją firmy"
+          ></iframe>
+          <section
+            class="owner background--main grid--span flex flex--center animate--from-right"
+          >
+            <picture>
+              <source
+                srcset="img/agnieszka-tomaszewska-le.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="img/agnieszka-tomaszewska-le.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="img/agnieszka-tomaszewska-le.jpg"
+                alt="Uśmiechnięta kobieta po 40-stce w beżowym stroju."
+                title="Agnieszka Tomaszewska-Le"
+                class="owner__image"
+                width="300px"
+                height="450px"
+              />
+            </picture>
+            <div class="owner__text-group">
+              <div class="owner__text-group-container">
+                <h3 class="owner__heading heading-tertiary">
+                  A wszystko zaczęło się od Agnieszki...
+                </h3>
+                <blockquote class="owner__quote">
+                  Pomysł na otwarcie własnego biznesu chodził mi już po głowie
+                  od jakiegoś czasu. Lata doświadczenia w zawodzie kucharza i
+                  setki zadowolonych klientów, którzy wracają do mnie bez
+                  względu na to gdzie pracuję, pozwoliło mi uwierzyć, że
+                  prowadzenie własnej firmy jest możliwe. Po dwóch dekadach
+                  pracy jako kucharz wreszcie mi się to udało i mogę
+                  eksperymentować w kuchni jak nigdy dotąd!
+                </blockquote>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section
+        id="kontakt"
+        class="section contact vertical-padding--large curve curve--bottom curve--bottom-shadow-line curve--bottom-shadow-line-gradient-all"
+      >
+        <div
+          class="contact__container container container--default grid grid--2-columns"
+        >
+          <hgroup class="contact__header grid--span">
+            <p class="contact__subheading subheading">Kontakt</p>
+            <h2 class="contact__heading heading-secondary">
+              Skontaktuj się z nami, aby dowiedzieć się więcej
+            </h2>
+          </hgroup>
+          <img
+            src="img/family.svg"
+            alt="Grafika rodziny zasiadającej przy wspólnym stoliku do posiłku."
+            class="contact__image animate--from-left"
+            width="520px"
+            height="314.388px"
+          />
+          <div class="contact__text-group">
+            <p>
+              <a href="#"
+                ><img
+                  src="img/logo.svg"
+                  alt="Logo - Kociołek - Agnieszka Tomaszewska-Le"
+                  class="contact__logo"
+                  width="200px"
+                  height="55.5px"
+              /></a>
+            </p>
+            <p class="contact__company-name">
+              “Kociołek” Agnieszka Tomaszewska-Le
+            </p>
+            <p class="contact__company-address">
+              ul. Ogrody 15, 85-870 Bydgoszcz
+            </p>
+            <p class="contact__company-details">
+              Pierwsze piętro Domu Kultury “Modraczek”
+            </p>
+            <p class="contact__company-nip">NIP: 9671025776</p>
+            <p class="contact__company-phone">
+              Numer telefonu: <a href="tel:+48721473077">+48 721 473 077</a>
+            </p>
+            <p class="contact__company-mail">
+              Adres e-mail:
+              <a
+                href="mailto:kociolekbydgoszcz@gmail.com?subject=Wiadomość%20ze%20strony%20kociolekbydgoszcz.pl"
+                >kociolekbydgoszcz@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer vertical-padding--large background--main">
+      <div
+        class="footer__container container container--default flex flex--space-between"
+      >
+        <nav class="footer-navigation">
+          <ul class="footer-navigation__ul flex flex--center">
+            <li>
+              <a href="#" class="footer-navigation__link"
+                >Na górę
+                <i class="ph-arrow-up-bold correct-phosphor-position"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#oferta" class="footer-navigation__link">Oferta</a>
+            </li>
+            <li>
+              <a href="#na-wynos" class="footer-navigation__link">Na wynos</a>
+            </li>
+            <li><a href="#menu" class="footer-navigation__link">Menu</a></li>
+            <li><a href="#o-nas" class="footer-navigation__link">O nas</a></li>
+            <li>
+              <a href="#kontakt" class="footer-navigation__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__created-by">
+          Made with <i class="footer__heart ph-heart-fill"></i> by Dawid Le Hai.
+        </p>
+      </div>
+    </footer>
+    <aside class="credits">
+      <div class="credits__container">
+        <h1 class="credits__heading">Credits</h1>
+        <p class="credits__paragraph">
+          This website was created manually using modern HTML, CSS, and JS by
+          Dawid Le Hai.
+        </p>
+        <p class="credits__paragraph">
+          The cooking pot graphic in the logo was created by Amonrat
+          Rungreangfangsai and it was taken from
+          <a href="https://www.flaticon.com/free-icons/food" title="Food icons"
+            >Flaticon</a
+          >
+          website.
+        </p>
+        <p class="credits__paragraph">
+          All other vector graphics are a part of free food & restaurant
+          illustrations from
+          <a
+            href="https://www.drawkit.com/product/restaurants-dining-illustrations"
+            >DrawKit</a
+          >.
+        </p>
+        <p class="credits__paragraph">
+          The cover photo used in the offer section was taken by Al Elmes on
+          <a href="https://unsplash.com/">Unsplash</a>.
+        </p>
+      </div>
+    </aside>
+  </body>
+</html>

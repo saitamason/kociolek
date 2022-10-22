@@ -1,0 +1,28 @@
+{
+  "name": "kociolek",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawidlehai/kociolek.git"
+  },
+  "author": "Dawid Le Hai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawidlehai/kociolek/issues"
+  },
+  "homepage": "https://github.com/dawidlehai/kociolek#readme",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "core-js": "^3.25.5",
+    "regenerator-runtime": "^0.13.10"
+  }
+}

@@ -1,0 +1,270 @@
+.hidden {
+  opacity: 0;
+}
+
+.background--main {
+  background-color: var(--color--main-0);
+}
+
+.correct-phosphor-position {
+  transform: translateY(15%);
+}
+.correct-phosphor-margin {
+  margin-right: -0.6rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.container--default {
+  max-width: var(--page-width--default);
+}
+.container--wide {
+  max-width: var(--page-width--wide);
+}
+.container--max {
+  max-width: var(--page-width--max);
+}
+
+.flex {
+  display: flex;
+}
+.flex--center {
+  align-items: center;
+}
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+.grid--2-columns {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.grid--gap-medium {
+  gap: 4.8rem;
+}
+.grid--span {
+  grid-column: 1 / -1;
+}
+.grid--to-first-column {
+  grid-column: 1;
+}
+.grid--to-second-column {
+  grid-column: 2;
+}
+
+.vertical-padding--large {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+}
+
+.subheading {
+  font-weight: var(--font-weight--medium);
+  font-size: var(--font-size--small);
+  letter-spacing: var(--letter-spacing--larger);
+  text-transform: uppercase;
+  color: var(--color--main-4);
+}
+.heading-primary {
+  color: var(--color--shade-3);
+  font-size: var(--font-size--huge);
+  line-height: var(--line-height--small);
+  letter-spacing: var(--letter-spacing--much-smaller);
+}
+.heading-secondary {
+  color: var(--color--shade-3);
+  font-size: var(--font-size--very-large);
+  line-height: var(--line-height--medium);
+  letter-spacing: var(--letter-spacing--smaller);
+}
+.heading-tertiary {
+  color: var(--color--shade-2);
+  font-size: var(--font-size--large);
+  line-height: var(--line-height--medium-large);
+}
+
+.button:link,
+.button:visited {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: var(--border-radius--large);
+  color: inherit;
+  font-weight: var(--font-weight--medium);
+  z-index: 0;
+  transition: var(--animation--regular);
+}
+.button::before,
+.button::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.button::before {
+  border-radius: inherit;
+  top: 0.1rem;
+  left: 0.3rem;
+  transition: all 0.3s linear;
+}
+.button::after {
+  border-radius: inherit;
+  box-shadow: var(--shadow--border-thin);
+  top: 0;
+  left: 0;
+}
+.button--main::before {
+  background: var(--color--main-2);
+}
+.button--accent-primary::before {
+  background: var(--color--accent-primary-0);
+}
+.button--accent-secondary::before {
+  background: var(--color--accent-secondary-0);
+}
+.button--white::before {
+  background: var(--color--white);
+}
+.button:hover {
+  transform: translateY(-5%);
+  box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.06);
+  border: none;
+}
+.button:active {
+  transform: translateY(5%);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.12);
+  border: none;
+}
+.button--animation-keyframe-1::before {
+  transform: scale3d(1.05, 1.15, 2) skew(-10deg, 2deg);
+}
+.button--animation-keyframe-2::before {
+  transform: scale3d(1.08, 1.12, 4) skew(-5deg, 0deg);
+}
+.button--animation-keyframe-3::before {
+  transform: scale3d(1.02, 1.04, 1) skew(2deg, -2deg);
+}
+
+.highlight {
+  position: relative;
+  z-index: 0;
+}
+.highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.highlight--accent-primary::before {
+  background-color: var(--color--accent-primary-0);
+}
+.highlight--accent-secondary::before {
+  background-color: var(--color--accent-secondary-0);
+}
+.highlight--main::before {
+  background-color: var(--color--main-2);
+}
+
+.curve {
+  position: relative;
+  z-index: 0;
+}
+.curve--bottom::after,
+.curve--top::after,
+.curve--bottom-shadow-line::before,
+.curve--top-shadow-line::before {
+  content: '';
+  width: 150%;
+  position: absolute;
+  left: 50%;
+  height: 10rem;
+  background-color: inherit;
+  border-radius: 100%;
+  z-index: 1;
+}
+.curve--bottom::after,
+.curve--bottom-shadow-line::before {
+  transform: translate(-50%, -50%);
+}
+.curve--top::after,
+.curve--top-shadow-line::before {
+  transform: translate(-50%, 50%);
+}
+.curve--bottom::after {
+  top: 100%;
+}
+.curve--top::after {
+  bottom: 100%;
+}
+.curve--bottom-shadow::after,
+.curve--bottom-shadow-line::before {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+.curve--top-shadow::after,
+.curve--top-shadow-line::before {
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+.curve--bottom-shadow-line::before,
+.curve--top-shadow-line::before {
+  width: 120%;
+}
+.curve--bottom-shadow-line::before {
+  top: 101.5%;
+}
+.curve--top-shadow-line::before {
+  bottom: 101.5%;
+}
+.curve--bottom-shadow-line-main::before {
+  background-color: var(--color--main-3);
+}
+.curve--top-shadow-line-accent-primary::before {
+  background-color: var(--color--accent-primary-0);
+}
+.curve--bottom-shadow-line-gradient-1::before {
+  background: linear-gradient(
+    90deg,
+    var(--color--main-3) 70%,
+    var(--color--accent-secondary-0) 90%
+  );
+}
+.curve--bottom-shadow-line-gradient-2::before {
+  background: linear-gradient(
+    90deg,
+    var(--color--accent-primary-0) 70%,
+    var(--color--main-3) 90%
+  );
+}
+.curve--bottom-shadow-line-gradient-all::before {
+  background: linear-gradient(
+    90deg,
+    var(--color--accent-tertiary-0) 30%,
+    var(--color--accent-secondary-0) 40% 60%,
+    var(--color--accent-primary-0) 70%
+  );
+}
+
+.animation--fade {
+  animation: 0.8s fade ease-out backwards;
+}
+.animation--fade-delay-1 {
+  animation-delay: 0.2s;
+}
+.animation--fade-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.animation--slide {
+  animation: 1s slideFromRight ease-in-out backwards;
+}
+.animation--slide-reverse {
+  animation: 1s slideFromLeft ease-in-out backwards;
+}
