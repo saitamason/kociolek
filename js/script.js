@@ -59,6 +59,7 @@ if (!isMobile()) {
   // Scroll with offset
 
   const scrollWithOffset = function (event) {
+    if (!event.target.href.includes('#')) return;
     event.preventDefault();
 
     if (!event.target.classList.contains(this)) return;
@@ -104,74 +105,74 @@ if (!isMobile()) {
     scrollWithOffset.bind('hero__button--contact')
   );
 
-  window.addEventListener('load', () => {
-    if (window.scrollY) return;
+  // window.addEventListener('load', () => {
+  //   if (window.scrollY) return;
 
-    // Reveal elements on scroll
+  //   // Reveal elements on scroll
 
-    const allSections = document.querySelectorAll('.section');
+  //   const allSections = document.querySelectorAll('.section');
 
-    const revealSection = (entries, observer) => {
-      const [entry] = entries;
-      if (!entry.isIntersecting) return;
-      const texts = entry.target.querySelectorAll('hgroup, p');
-      const images = entry.target.querySelectorAll(
-        '.animate--from-left, .animate--from-right'
-      );
-      texts.forEach(element => {
-        element.classList.remove('hidden');
-        element.classList.add('animation--fade');
-      });
-      images.forEach(image => {
-        image.classList.remove('hidden');
-        if (image.classList.contains('animate--from-right'))
-          image.classList.add('animation--slide');
-        else image.classList.add('animation--slide-reverse');
-      });
-      observer.unobserve(entry.target);
-    };
+  //   const revealSection = (entries, observer) => {
+  //     const [entry] = entries;
+  //     if (!entry.isIntersecting) return;
+  //     const texts = entry.target.querySelectorAll('hgroup, p');
+  //     const images = entry.target.querySelectorAll(
+  //       '.animate--from-left, .animate--from-right'
+  //     );
+  //     texts.forEach(element => {
+  //       element.classList.remove('hidden');
+  //       element.classList.add('animation--fade');
+  //     });
+  //     images.forEach(image => {
+  //       image.classList.remove('hidden');
+  //       if (image.classList.contains('animate--from-right'))
+  //         image.classList.add('animation--slide');
+  //       else image.classList.add('animation--slide-reverse');
+  //     });
+  //     observer.unobserve(entry.target);
+  //   };
 
-    const sectionObserver = new IntersectionObserver(revealSection, {
-      root: null,
-      threshold: 0.3,
-    });
+  //   const sectionObserver = new IntersectionObserver(revealSection, {
+  //     root: null,
+  //     threshold: 0.3,
+  //   });
 
-    allSections.forEach(section => {
-      const texts = section.querySelectorAll('hgroup, p');
-      const images = section.querySelectorAll(
-        '.animate--from-left, .animate--from-right'
-      );
-      texts.forEach(element => element.classList.add('hidden'));
-      images.forEach(image => image.classList.add('hidden'));
-      sectionObserver.observe(section);
-    });
+  //   allSections.forEach(section => {
+  //     const texts = section.querySelectorAll('hgroup, p');
+  //     const images = section.querySelectorAll(
+  //       '.animate--from-left, .animate--from-right'
+  //     );
+  //     texts.forEach(element => element.classList.add('hidden'));
+  //     images.forEach(image => image.classList.add('hidden'));
+  //     sectionObserver.observe(section);
+  //   });
 
-    // Reveal features on scroll
+  //   // Reveal features on scroll
 
-    const featuresBox = document.querySelector('.offer__features');
-    const allFeatures = featuresBox.querySelectorAll('li');
+  //   const featuresBox = document.querySelector('.offer__features');
+  //   const allFeatures = featuresBox.querySelectorAll('li');
 
-    allFeatures.forEach(feature => feature.classList.add('hidden'));
+  //   allFeatures.forEach(feature => feature.classList.add('hidden'));
 
-    function revealFeatures(entries, observer) {
-      const [entry] = entries;
-      if (!entry.isIntersecting) return;
-      allFeatures.forEach((feature, i) => {
-        setTimeout(() => {
-          feature.classList.remove('hidden');
-          feature.querySelector('i').style.animationPlayState = 'running';
-        }, i * 200);
-      });
-      observer.unobserve(entry.target);
-    }
+  //   function revealFeatures(entries, observer) {
+  //     const [entry] = entries;
+  //     if (!entry.isIntersecting) return;
+  //     allFeatures.forEach((feature, i) => {
+  //       setTimeout(() => {
+  //         feature.classList.remove('hidden');
+  //         feature.querySelector('i').style.animationPlayState = 'running';
+  //       }, i * 200);
+  //     });
+  //     observer.unobserve(entry.target);
+  //   }
 
-    const featuresObserver = new IntersectionObserver(revealFeatures, {
-      root: null,
-      threshold: 0,
-    });
+  //   const featuresObserver = new IntersectionObserver(revealFeatures, {
+  //     root: null,
+  //     threshold: 0,
+  //   });
 
-    featuresObserver.observe(featuresBox);
-  });
+  //   featuresObserver.observe(featuresBox);
+  // });
 
   // Animate buttons
 
@@ -179,52 +180,52 @@ if (!isMobile()) {
   const buttonAnimationClassName = 'button--animation-keyframe-';
   let buttonAnimationInterval;
 
-  allButtons.forEach(button => {
-    button.addEventListener('mouseover', function () {
-      const element = this;
-      let currentKeyframe = setAnimationClasses(
-        element,
-        buttonAnimationClassName,
-        3,
-        0
-      );
-      buttonAnimationInterval = setInterval(function () {
-        currentKeyframe = setAnimationClasses(
-          element,
-          buttonAnimationClassName,
-          3,
-          currentKeyframe
-        );
-      }, 300);
-    });
+  // allButtons.forEach(button => {
+  //   button.addEventListener('mouseover', function () {
+  //     const element = this;
+  //     let currentKeyframe = setAnimationClasses(
+  //       element,
+  //       buttonAnimationClassName,
+  //       3,
+  //       0
+  //     );
+  //     buttonAnimationInterval = setInterval(function () {
+  //       currentKeyframe = setAnimationClasses(
+  //         element,
+  //         buttonAnimationClassName,
+  //         3,
+  //         currentKeyframe
+  //       );
+  //     }, 300);
+  //   });
 
-    button.addEventListener('mouseleave', function () {
-      clearInterval(buttonAnimationInterval);
-      removeAnimationClasses(this, buttonAnimationClassName, 3);
-    });
-  });
+  //   button.addEventListener('mouseleave', function () {
+  //     clearInterval(buttonAnimationInterval);
+  //     removeAnimationClasses(this, buttonAnimationClassName, 3);
+  //   });
+  // });
 
-  function setAnimationClasses(
-    targetElement,
-    animationClassName,
-    numberOfKeyframes,
-    currentKeyframe
-  ) {
-    targetElement.classList.remove(`${animationClassName}${currentKeyframe}`);
-    if (currentKeyframe === numberOfKeyframes) currentKeyframe = 0;
-    else
-      targetElement.classList.add(`${animationClassName}${++currentKeyframe}`);
-    return currentKeyframe;
-  }
+  // function setAnimationClasses(
+  //   targetElement,
+  //   animationClassName,
+  //   numberOfKeyframes,
+  //   currentKeyframe
+  // ) {
+  //   targetElement.classList.remove(`${animationClassName}${currentKeyframe}`);
+  //   if (currentKeyframe === numberOfKeyframes) currentKeyframe = 0;
+  //   else
+  //     targetElement.classList.add(`${animationClassName}${++currentKeyframe}`);
+  //   return currentKeyframe;
+  // }
 
-  function removeAnimationClasses(
-    targetElement,
-    animationClassName,
-    numberOfKeyframes
-  ) {
-    for (let i = 1; i <= numberOfKeyframes; i++)
-      targetElement.classList.remove(`${animationClassName}${i}`);
-  }
+  // function removeAnimationClasses(
+  //   targetElement,
+  //   animationClassName,
+  //   numberOfKeyframes
+  // ) {
+  //   for (let i = 1; i <= numberOfKeyframes; i++)
+  //     targetElement.classList.remove(`${animationClassName}${i}`);
+  // }
 
   // Fade out header on link hover
 
