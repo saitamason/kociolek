@@ -321,6 +321,10 @@
   .contact__image {
     grid-row: 2 / 3;
   }
+
+  .flex--h-center {
+    display: block;
+  }
 }
 
 @media (max-width: 24em /* 384px */) {

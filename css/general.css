@@ -37,6 +37,9 @@
 .flex--center {
   align-items: center;
 }
+.flex--h-center {
+  justify-content: center;
+}
 .flex--space-between {
   justify-content: space-between;
 }
@@ -51,6 +54,9 @@
 .grid--gap-medium {
   gap: 4.8rem;
 }
+.grid--no-h-gap {
+  row-gap: 0;
+}
 .grid--span {
   grid-column: 1 / -1;
 }
@@ -59,6 +65,9 @@
 }
 .grid--to-second-column {
   grid-column: 2;
+}
+.grid--top {
+  align-items: start;
 }
 
 .vertical-padding--large {

@@ -368,8 +368,9 @@
   font-size: var(--font-size--small);
 }
 
-.syl-h1 {
-  text-align: center;
+.offer__features {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
 }
 
 .offer__features h3 {
@@ -381,6 +382,28 @@
   font-size: 1.6rem;
   font-weight: normal;
 }
-.hero {
-  justify-content: center;
+
+.menu-sylwestrowe {
+  margin-bottom: 9rem;
+}
+
+.menu-list {
+  margin-top: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.menu-list li {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  padding-left: 0.8rem;
+  list-style: '★';
+}
+
+.subheading-secondary {
+  font-style: italic;
+  color: var(--color--shade-0);
+}
+
+.sylwester-menu-container {
+  padding-bottom: 0;
 }
