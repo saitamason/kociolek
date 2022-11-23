@@ -16,7 +16,6 @@ const makeHeaderSticky = entries => {
     hero.style.marginTop = 0;
   } else {
     header.classList.add('header--sticky');
-    hero.style.marginTop = `${headerHeight}px`;
   }
 };
 
