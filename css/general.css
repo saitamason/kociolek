@@ -75,6 +75,10 @@
   padding-bottom: 6.4rem;
 }
 
+.top-margin--large {
+  margin-top: 9.6rem;
+}
+
 .subheading {
   font-weight: var(--font-weight--medium);
   font-size: var(--font-size--small);

@@ -406,10 +406,14 @@
 
 .menu-table {
   width: 100%;
+}
+
+.menu-table tr {
   display: grid;
-  gtc
+  grid-template-columns: 1fr max-content;
+  gap: 1rem;
 }
 
 .menu-table td:last-child {
-  width: max-content;
+  font-weight: 500;
 }
