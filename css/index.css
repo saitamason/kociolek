@@ -403,3 +403,13 @@
   font-style: italic;
   color: var(--color--shade-0);
 }
+
+.menu-table {
+  width: 100%;
+  display: grid;
+  gtc
+}
+
+.menu-table td:last-child {
+  width: max-content;
+}
