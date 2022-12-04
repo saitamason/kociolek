@@ -96,6 +96,10 @@
   .footer__created-by {
     text-align: center;
   }
+
+  .menu-cta {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 58.25em /* 932px */) {
@@ -220,6 +224,10 @@
   }
   .navigation-closing-animation .menu-button--close {
     opacity: 0;
+  }
+
+  .background-wigilia {
+    background: var(--color--accent-primary-0);
   }
 }
 
